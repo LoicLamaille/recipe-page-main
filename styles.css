@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'YoungSerif';
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+:root {
+    --color-white : hsl(0, 0%, 100%);
+    --color-stone100 : hsl(30, 54%, 90%);
+    --color-stone150: hsl(30, 18%, 87%);
+    --color-stone600: hsl(30, 10%, 34%);
+    --color-stone900: hsl(24, 5%, 18%);
+    --color-brown800: hsl(14, 45%, 36%);
+    --color-rose800: hsl(332, 51%, 32%);
+    --color-rose50: hsl(330, 100%, 93%);
+}
+
+
+body{
+    font-family: 'Outfit', sans-serif;
+    color: var(--color-stone900);
+    background-color: var(--color-stone100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,h2{
+    font-family: 'YoungSerif', serif;
+    font-weight: 400;
+    color: var(--color-stone900);
+}
+
+h2{
+    color: var(--color-brown800);
+}
+
+p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+ul, ol{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ul li, ol li{
+    padding-left: 15px;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+#card{
+    width: 70%;
+    background-color: var(--color-white);
+    margin: 50px 0;
+    border-radius: 20px;
+}
+
+#header{
+    padding: 30px;
+}
+
+#banner-img{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+#content{
+    padding: 2rem;
+}
+
+#preparation-time{
+    background-color: var(--color-rose50);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+}
+
+#preparation-time h3{
+    color: var(--color-rose800);
+    font-weight: 600;
+}
+
+#preparation-time ul li::marker{
+    color: var(--color-rose800);
+}
+
+#instructions ol li::marker{
+    color: var(--color-brown800);
+    font-weight: 700;
+}
+
+#nutrition p{
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+tr {
+    border-bottom: 1px solid var(--color-stone600);
+}
+
+tr :nth-child(2){
+    color: var(--color-brown800);
+}
+
+td {
+    padding: 10px;
+    text-align: left; 
+}
+
+tr:hover {
+    background-color: var(--color-stone100);
+    transition: all 0.3s ease-in-out; 
+}
+
+tr:last-child {
+    border-bottom: none; 
+}
+
+@media screen and (max-width: 400px){
+
+    h3{
+        font-size: 15px;
+    }
+    #card{
+        width: 90%;
+        margin: 0px;
+    }
+
+    #header{
+        padding: 0px;
+    }
+
+    #banner-img{
+        border-radius: 0px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    ul, ol{
+    gap: 15px;
+}
+
+ul, ol{
+    padding-left: 15px;
+}
+    
+}
